@@ -25,7 +25,7 @@ layer norm是在一个样本内部做norm
 >
 > (下图中橙色正方形的所有值进行norm)
 >
-> ![image-20250809193922664](C:\Users\20200\AppData\Roaming\Typora\typora-user-images\image-20250809193922664.png)
+> ![image-20250809193922664](./images2/image-20250809193922664.png)
 
 **为什么用layer norm**
 
@@ -56,7 +56,7 @@ layer norm是在一个样本内部做norm
 
 transformer使用点乘计算相似度
 
-![image-20250809111229448](C:\Users\20200\AppData\Roaming\Typora\typora-user-images\image-20250809111229448.png)
+![image-20250809111229448](./images2/image-20250809111229448.png)
 
 维度变化:
 
@@ -90,7 +90,7 @@ transformer使用点乘计算相似度
 > output = torch.matmul(attn, V)
 > ```
 
-![image-20250809113051730](C:\Users\20200\AppData\Roaming\Typora\typora-user-images\image-20250809113051730.png)
+![image-20250809113051730](./images2/image-20250809113051730.png)
 
 **多头**
 
@@ -103,7 +103,7 @@ transformer使用点乘计算相似度
 目的:增加可以学习的参数
 投影后的度量空间里匹配不同的模式
 
-![image-20250809113333638](C:\Users\20200\AppData\Roaming\Typora\typora-user-images\image-20250809113333638.png)
+![image-20250809113333638](./images2/image-20250809113333638.png)
 
 **除以根号dk:**
 
@@ -155,7 +155,7 @@ transformer使用点乘计算相似度
 
 即解码器根据输入,在编码器的输出里挑感兴趣的东西
 
-![image-20250809162905175](C:\Users\20200\AppData\Roaming\Typora\typora-user-images\image-20250809162905175.png)
+![image-20250809162905175](./images2/image-20250809162905175.png)
 
 **Feed-Forward Networks**
 
@@ -232,5 +232,6 @@ Embedding:0.04 vs PosEnc:1.0
 ysmooth=[0.025,0.025,0.9,0.025,0.025]
 
 避免模型过度自信,提升泛化能力
+
 
 平滑后的标签等于在“告诉”模有一部分概率分布在其他词上,结果更鲁棒
